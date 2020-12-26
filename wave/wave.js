@@ -1,6 +1,6 @@
 import {
     Point
-} from './Point.js';
+} from '../Point.js';
 
 export class Wave {
 
