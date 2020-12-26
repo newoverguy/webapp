@@ -10,6 +10,7 @@ https://youtu.be/LLfhY4eVwDY
 * sin 함수로 가볍게 살펴보시면 좋습니다.
 * visual studio code 로 가볍게 해보세요.
 * 가볍게 하기 위해서는 live server extention이 필요합니다.
+  * pull 받고 나서 wave folder로 open folder 한 후 live server workspace 설정하셔야 합니다.
 
 ### 학습된 항목된
 * API 
