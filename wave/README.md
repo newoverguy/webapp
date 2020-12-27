@@ -42,6 +42,10 @@ https://youtu.be/LLfhY4eVwDY
   * ‘경로가 없는’ 모듈은 금지
   * 호환을 위한 ‘nomodule’ &lt;script nomodule&gt;
 
+## 더 찾아볼 부분
+* 성능
+  * window.addEventListener, window.requestAnimationFrame 이 부분에서 성능 저하가 발생할 것으로 보입니다.
+  * 특히, requestAnimationFrame 이 repaint 되는 영역을 활용하지 말고 canvas 내부에서 처리할 수 있는 방법이 없을까요?
 
 ## Running
 * index.html 을 브라우저로 실행 하시면 됩니다.
