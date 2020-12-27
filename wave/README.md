@@ -50,5 +50,18 @@ https://youtu.be/LLfhY4eVwDY
 ## Running
 * index.html 을 브라우저로 실행 하시면 됩니다.
 
+## 예제 설명
+
+* 역할자
+  * App.js : 앱 구동 및 window 객체 이벤트와 바인딩. 렌더링의 trigger 역할
+  * WaveGroup.js: 물결을 갯수를 정의하고 갯수에 따른 Wave 객체를 생성합니다. 또한, re-render의 gateway 역할이며 loop를 돌면서 Wave에 re-paint를 요청합니다.
+  * Wave.js: 각 개별 물결을 정의합니다. 이 물결은 6개의 점(x, y)으로 구성되어 선을 연결합니다.
+  * Point.js: 하나의 Wave의 하나의 점(x, y)을 정의합니다. 이 점은 Y값을 변화를 주고 위아래로 움직이도록하기 위해 Y값을 지속적으로 변경 시킵니다.
+
+* repaint flow
+  * window.addEventListener('resize') -> WaveGroup.resize() -> wave.resize -> wave.init() => Make Point Objects with for-loop
+  * window.requestAnimationFrame() -> App.animate() -> WaveGroup.draw() -> for-in => wave.draw() -> for-in => point.update
+
+
 ## Acknowledgments
 * 유투버 Interactive Developer 님에게 감사합니다. 코드를 제 스타일로 조금 변경했고 이해를 위해서 주석을 포함했습니다.
